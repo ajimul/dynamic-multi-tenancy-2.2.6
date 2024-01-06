@@ -23,7 +23,7 @@ public class JwtUserDetailsService implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String userName) throws UsernameNotFoundException {
-        com.accounting.rest.multitenant.tenant.entity.User user = userRepository.findByUserName(userName);
+        com.accounting.rest.multitenant.tenant.entity.Users user = userRepository.findByUserName(userName);
         if(null == user){
             throw new UsernameNotFoundException("Invalid user name or password.");
         }

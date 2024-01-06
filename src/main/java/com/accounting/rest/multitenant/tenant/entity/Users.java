@@ -10,7 +10,7 @@ import javax.persistence.Id;
 
 @Entity
 
-public class User implements Serializable {
+public class Users implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long userId;
@@ -35,12 +35,12 @@ public class User implements Serializable {
 	@Column(nullable = false)
 	private String status;
 
-	public User() {
+	public Users() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public User(Long userId, String userName, String email, String password, Boolean active, String clientId,
+	public Users(Long userId, String userName, String email, String password, Boolean active, String clientId,
 			String dbName, String roles, String status) {
 		super();
 		this.userId = userId;

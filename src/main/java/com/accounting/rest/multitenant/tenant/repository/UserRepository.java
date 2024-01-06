@@ -3,14 +3,14 @@ package com.accounting.rest.multitenant.tenant.repository;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.accounting.rest.multitenant.tenant.entity.User;
+import com.accounting.rest.multitenant.tenant.entity.Users;
 
 /**
  * @author Md. Amran Hossain
  */
 @Repository
-public interface UserRepository extends JpaRepository<User, Long> {
+public interface UserRepository extends JpaRepository<Users, Long> {
 
-	User findByUserName(String userName);
+	Users findByUserName(String userName);
 
 }

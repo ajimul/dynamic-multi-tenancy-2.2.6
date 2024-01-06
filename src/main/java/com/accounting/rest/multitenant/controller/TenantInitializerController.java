@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.accounting.rest.multitenant.mastertenant.entity.MasterTenant;
 import com.accounting.rest.multitenant.mastertenant.service.MasterTenantServiceImpl;
-import com.accounting.rest.multitenant.tenant.entity.User;
+import com.accounting.rest.multitenant.tenant.entity.Users;
 import com.accounting.rest.multitenant.tenant.repository.UserRepository;
 
 @RestController
@@ -29,7 +29,7 @@ public class TenantInitializerController {
 	}
 
 	@PostMapping("/user")
-	public ResponseEntity<User> add_User(@RequestBody User user) {
+	public ResponseEntity<Users> add_User(@RequestBody Users user) {
 		return new ResponseEntity<>(userRepository.save(user), HttpStatus.CREATED);
 
 	}
